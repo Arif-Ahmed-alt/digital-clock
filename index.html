@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Digital clock</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+           position: absolute; 
+           text-align: center;
+           top:30%;
+           font-size: 40px;
+           font-weight: 400;
+           color: tomato;
+           
+        }
+        .display_time{
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            font-weight: 300;
+            
+        }
+        .t{
+            font-size: 72px;
+            width: 200px;
+            text-align: center;
+            border-radius: 7px;
+            box-shadow: 15px 15px 2px rgba(0,0,0,0.2);
+         
+        }
+        .t:not(:last-child){
+            margin-right: 25px;
+        }
+        .hrs{
+            background-color: red;
+            
+        }
+        .min{
+            background-color: #d54062;
+        }
+        .sec{
+            background-color: orangered;
+        }
+        p{
+            font-size: 20px;
+            padding: 3px;
+            border-radius: 7px;
+        }
+        .p1{
+            background-color: #cd0a0a;
+        }
+        .p2{
+            background-color:#ff5722;
+        }
+        .p3{
+            background-color: #ff4b5c;
+        }
+        @media (max-width: 650px){
+            .display_time{
+                flex-direction: column;
+            }   .t:not(:last-child){
+                margin:0
+            } 
+            .t:not(:last-child){
+                margin-bottom: 20px;
+            }
+            h1{
+                top:10%;
+                text-align: center;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <h1>DIGITAL CLOCK</h1>
+    <div class="display_time">
+     
+        <div class="hrs t">00 <p class="p1"></p></div>
+        <div class="min t">00 <p class="p2"></p></div>
+        <div class="sec t">00 <p class="p3"></p></div>
+
+    </div>
+    
+    <script src="uri.js"></script>
+</body>
+</html>
